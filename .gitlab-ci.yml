@@ -1,0 +1,28 @@
+before_script:
+  - shopt -s expand_aliases
+  - uname -r
+  - pwd
+  - meteor node --version
+  - meteor npm --version
+  - export PROJECTFILE="teamproject3.tar.gz"
+  - export FOLDER="/home/snapzio/teamproject3/"
+  - bash version.sh > private/version.json;
+  - alias time="/usr/bin/time -f 'Took %e seconds'"
+
+cache:
+  paths:
+    - .meteor/local/
+    - node_modules/
+
+Dev:
+  only:
+    - dev
+  script:
+    - time nsp check --output summary
+    - time npm install;
+    - time eslint .
+    - time npm test
+    - time meteor build . --server-only;
+    - time find $FOLDER -mindepth 1 -delete;
+    - time rsync -av $PROJECTFILE $FOLDER;
+    - cd $FOLDER && tar -xf $PROJECTFILE && cd bundle/programs/server && meteor npm install --production && chown -R snapzio:www-data . && service nginx reload;
