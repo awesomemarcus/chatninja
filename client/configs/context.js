@@ -3,6 +3,23 @@ import {Meteor} from 'meteor/meteor';
 import {FlowRouter} from 'meteor/kadira:flow-router';
 import {ReactiveDict} from 'meteor/reactive-dict';
 import {Tracker} from 'meteor/tracker';
+import {UserStatus} from 'meteor/mizzao:user-status';
+import {FS} from 'meteor/cfs:base-package';
+
+Tracker.autorun(function(){
+ if (Meteor.userId()){
+  try {
+   UserStatus.startMonitor({
+    threshold: 600000,
+    interval: 5000,
+    idleOnBlur: true,
+   });
+  } catch(err) {
+   throw new Meteor.error(err);
+  }
+ }
+
+});
 
 const authCommon = function () {
 
@@ -28,5 +45,6 @@ export default function () {
     LocalState: new ReactiveDict(),
     Tracker,
     authCommon,
+    FS,
   };
 }

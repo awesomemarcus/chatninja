@@ -1,18 +1,18 @@
 import {useDeps, composeAll, composeWithTracker} from 'mantra-core';
 
-import UsersProfile from '../components/users_profile';
+import UsersList from '../components/users_list.jsx';
 
 export const composer = ({context}, onData) => {
- const {Meteor} = context();
+  const {Meteor} = context();
 
- if(Meteor.subscribe('users.current').ready()){
+  if(Meteor.subscribe('allUsers', Meteor.userId).ready()){
+   const users = Meteor.users.find({_id:{$ne:Meteor.userId()}}).fetch();
 
-  const user = Meteor.users.findOne();
+   onData(null, {users});
+  }
 
 
-  onData(null, {user});
 
- }
 };
 
 export const depsMapper = (context) => ({
@@ -22,4 +22,4 @@ export const depsMapper = (context) => ({
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper)
-)(UsersProfile);
+)(UsersList);
