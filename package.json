@@ -6,7 +6,7 @@
     "start": "./meteor.sh run",
     "android-device": "./meteor.sh run android-device",
     "version": "./version.sh > private/version.json",
-    "test": "istanbul cover _mocha -- .scripts/mocha_boot.js client/**/tests/**/*.js --compilers js:babel-core/register",
+    "test": "istanbul cover --dir .coverage _mocha -- .scripts/mocha_boot.js client/**/tests/**/*.js --compilers js:babel-core/register",
     "storybook": "start-storybook -p 9001"
   },
   "repository": {

@@ -18,7 +18,6 @@ Dev:
   only:
     - dev
   script:
-    - time nsp check --output summary
     - time npm install;
     - time eslint .
     - time npm test
