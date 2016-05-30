@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import UsersLogin from '../users_login.jsx';
+import UsersLogin from '../users_login';
 
 storiesOf('Users Login', module)
   .add('Login Form', () => {

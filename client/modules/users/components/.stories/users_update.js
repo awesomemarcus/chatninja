@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import UsersUpdate from '../users_update.jsx';
+import UsersUpdate from '../users_update';
 
 const getAgeOptions = ()=> {
   const ageOptions = [];

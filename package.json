@@ -28,8 +28,10 @@
     "enzyme": "^2.2.0",
     "jsdom": "^8.0.4",
     "mocha": "2.x.x",
+    "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^15.0.0",
-    "sinon": "1.17.x"
+    "sinon": "1.17.x",
+    "style-loader": "^0.13.1"
   },
   "dependencies": {
     "domready": "^1.0.8",

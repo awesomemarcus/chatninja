@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import UsersProfile from '../users_profile.jsx';
+import UsersProfile from '../users_profile';
 
 storiesOf('Users Profile', module)
   .add('Current user (Shows edit button)', () => {

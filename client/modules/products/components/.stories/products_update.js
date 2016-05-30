@@ -1,7 +1,7 @@
 import React from 'react';
 import {storiesOf, action} from '@kadira/storybook';
 
-import ProductsUpdate from '../products_update.jsx';
+import ProductsUpdate from '../products_update';
 
 const categories = [
   {_id: '1', name: 'Food'},

@@ -1,7 +1,7 @@
 import React from 'react';
 import {storiesOf, action} from '@kadira/storybook';
 
-import CategoriesList from '../categories_list.jsx';
+import CategoriesList from '../categories_list';
 
 const categories = [
   {

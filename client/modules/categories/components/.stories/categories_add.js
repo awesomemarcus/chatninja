@@ -1,7 +1,7 @@
 import React from 'react';
 import {storiesOf, action} from '@kadira/storybook';
 
-import CategoriesAdd from '../categories_add.jsx';
+import CategoriesAdd from '../categories_add';
 
 storiesOf('Categories Add', module)
   .add('default view', () => (
