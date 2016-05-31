@@ -1,5 +1,5 @@
 TN:
-SF:/home/aj/team3/teamproject3/client/modules/messages/actions/messages.js
+SF:/home/marcus/projects/exam/teamproject3/client/modules/messages/actions/messages.js
 FN:3,messageSend
 FN:3,validateMessage
 FN:3,clearErrors
@@ -28,7 +28,7 @@ BRF:2
 BRH:0
 end_of_record
 TN:
-SF:/home/aj/team3/teamproject3/lib/collections/messages.js
+SF:/home/marcus/projects/exam/teamproject3/lib/collections/messages.js
 FNF:0
 FNH:0
 DA:1,1

@@ -1,7 +1,7 @@
 const {describe, it} = global;
 import {expect} from 'chai';
 import {stub, spy} from 'sinon';
-import {composer} from '../messages_send';
+
 
 describe('messages.containers.messages_send', () => {
   describe('composer', () => {

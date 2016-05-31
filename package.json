@@ -38,6 +38,7 @@
   "dependencies": {
     "domready": "^1.0.8",
     "mantra-core": "^1.5.0",
+    "meteor-node-stubs": "^0.2.3",
     "moment": "^2.13.0",
     "node-simple-schema": "0.0.4",
     "react": "^15.0.0",
