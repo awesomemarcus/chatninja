@@ -93,6 +93,21 @@ class UsersUpdate extends React.Component {
     return classes;
 
   }
+
+  validateField(event) {
+    if(event && event.preventDefault){
+      const {validateInputField} = this.props;
+
+      const fieldName = event.currentTarget.name;
+      let fieldValue = event.currentTarget.value;
+
+      if(fieldName === 'age') {
+        fieldValue = parseInt(event.currentTarget.value);
+      }
+
+      validateInputField(fieldName, fieldValue);
+    }
+  }
 }
 
 export default UsersUpdate;
