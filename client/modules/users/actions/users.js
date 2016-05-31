@@ -93,6 +93,11 @@ export default {
     }
 
   },
+  userUpdatePhoto({Meteor}, avatarPhoto){
+
+   Meteor.call('userPhotoUpdate', avatarPhoto);
+
+  },
   clearErrors({LocalState}){
     LocalState.set("profile.username",null);
     LocalState.set("profile.firstname",null);
@@ -104,4 +109,5 @@ export default {
     LocalState.set("main_error",null) ;
     return  true;
   },
+
 }

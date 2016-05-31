@@ -57,5 +57,11 @@ export default function () {
 
 
     },
+    'usersUpdatePhoto'(avatarPhoto){
+
+     check(avatarPhoto, String);
+
+     Meteor.users.update(Meteor.userId(), {$set: {'profile.avatar': avatarPhoto}},{upsert: true});
+    },
   });
 }

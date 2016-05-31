@@ -4,11 +4,18 @@ import MessagesSend from '../components/messages_send.jsx';
 
 export const composer = ({context}, onData) => {
 
-  onData(null, {});
+ const {LocalState} = context();
+
+ const errorFields = {
+  message: LocalState.get('message-error', null),
+ }
+
+  onData(null, {errorFields});
 };
 
 export const depsMapper = (context, actions) => ({
-  sendMessage: actions.messages.sendMessage,
+  messageSend: actions.messages.messageSend,
+  validateMessage: actions.messages.validateMessage,
   context: () => context,
 });
 
