@@ -8,6 +8,7 @@ import productsModule from './modules/products';
 import categoriesModule from './modules/categories';
 import usersModule from './modules/users';
 import uploadsModule from './modules/uploads';
+import messagesModule from './modules/messages';
 
 // init context
 const context = initContext();
@@ -19,6 +20,7 @@ app.loadModule(productsModule);
 app.loadModule(categoriesModule);
 app.loadModule(usersModule);
 app.loadModule(uploadsModule);
+app.loadModule(messagesModule);
 app.init();
 
 //Site Title

@@ -26,6 +26,7 @@
     "babel-root-slash-import": "1.x.x",
     "chai": "3.x.x",
     "enzyme": "^2.2.0",
+    "eslint-plugin-react": "^5.1.1",
     "jsdom": "^8.0.4",
     "mocha": "2.x.x",
     "raw-loader": "^0.5.1",

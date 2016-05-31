@@ -15,7 +15,7 @@ Tracker.autorun(function(){
     idleOnBlur: true,
    });
   } catch(err) {
-   throw new Meteor.error(err);
+    return err;
   }
  }
 
