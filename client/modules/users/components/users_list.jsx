@@ -10,7 +10,7 @@ class UsersList extends React.Component{
    <div>
     <div className="row">
       {users.map( user => (
-        <div className="col-sm-6 col-md-4" key={user._id} >
+        <div className="col-sm-6 col-md-3" key={user._id} >
           <UsersItem user={user} />
         </div>
       ))}
