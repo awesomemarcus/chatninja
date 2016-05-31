@@ -1,6 +1,5 @@
 import React from 'react';
-import moment from 'moment';
-
+import UsersItem from './users_item.jsx'
 
 class UsersList extends React.Component{
  render(){
@@ -9,9 +8,13 @@ class UsersList extends React.Component{
 
   return(
    <div>
-    {users.map( user => (
-     <p>{user.profile.username} - {(user.status.online && !user.status.idle) ? <p>online</p> : (user.status.online && user.status.idle) ? <p>Last Activity: {moment(user.status.lastActivity).format("dddd, MMMM Do YYYY, h:mm:ss a")}</p> : <p>Offline</p>}</p>
-    ))}
+    <div className="row">
+      {users.map( user => (
+        <div className="col-sm-6 col-md-4" key={user._id} >
+          <UsersItem user={user} />
+        </div>
+      ))}
+    </div>
    </div>
   );
  }
