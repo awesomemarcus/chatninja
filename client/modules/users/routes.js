@@ -49,7 +49,7 @@ export default function (injectDeps, {FlowRouter,Meteor}) {
      content: () => (<UsersProfile />),
      MainLayout: MainLayoutCtx,
     })
-   }
+  },
   })
 
 }

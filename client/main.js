@@ -38,3 +38,7 @@ DocHead.addLink(cssLink);
 // Loading Meta tag
 var metaInfo = {name: "description", content: "Mantra Boilerplate"};
 DocHead.addMeta(metaInfo);
+
+// Mobile View
+const metaMobile = {name: 'viewport', content: 'width=device-width, initial-scale=1'};
+DocHead.addMeta(metaMobile);

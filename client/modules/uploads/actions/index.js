@@ -1,5 +1,5 @@
 import uploads from './uploads';
 
 export default {
-  uploads
+  uploads,
 };

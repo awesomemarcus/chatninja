@@ -12,12 +12,7 @@ export default function () {
       bulkOp.insert(data);
      });
 
-     bulkOp.execute(function(e, result){
-      if(e){
-       return console.log(e);
-      }
-      return console.log(result.toJSON())
-     })
+     bulkOp.execute()
     },
   });
 }
