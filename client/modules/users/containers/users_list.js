@@ -6,7 +6,7 @@ export const composer = ({context}, onData) => {
   const {Meteor} = context();
 
   if(Meteor.subscribe('allUsers', Meteor.userId).ready()){
-   const users = Meteor.users.find({_id:{$ne:Meteor.userId()}}).fetch();
+   const users = Meteor.users.find({_id:{$ne:Meteor.userId()}},{sort: {'status.online': -1, 'profile.username': 1}}).fetch();
 
    onData(null, {users});
   }

@@ -6,10 +6,10 @@ class MessagesSend extends React.Component{
   e.preventDefault();
 
   // generating a message id for recepient's copy of message (current user's id + recepient_id )
-  const senderId = Meteor.userId() + 'kHaEwhLjaeJnDH9Yq';
+  const senderId = Meteor.userId() + 'QNee4Es2Lqf2bPCNg';
 
   // generating message id for recepient's copy of message (recepient_id + current user's id)
-  const receiverId = 'kHaEwhLjaeJnDH9Yq' + Meteor.userId();
+  const receiverId = 'QNee4Es2Lqf2bPCNg' + Meteor.userId();
 
   const {messageSend, validateMessage} = this.props;
 

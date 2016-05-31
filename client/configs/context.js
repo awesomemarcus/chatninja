@@ -10,9 +10,8 @@ Tracker.autorun(function(){
  if (Meteor.userId()){
   try {
    UserStatus.startMonitor({
-    threshold: 600000,
-    interval: 5000,
-    idleOnBlur: true,
+    threshold: 6000,
+    interval: 50000,
    });
   } catch(err) {
     return err;
