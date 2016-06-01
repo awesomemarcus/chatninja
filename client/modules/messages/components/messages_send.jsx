@@ -21,6 +21,7 @@ class MessagesSend extends React.Component{
   }
 
   $('#main').animate({scrollTop: 1000000});
+  this.refs.message.value = "";
 
  }
 
