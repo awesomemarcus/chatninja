@@ -4,7 +4,7 @@ import MessagesSend from '../components/messages_send.jsx';
 
 export const composer = ({context}, onData) => {
 
- const {Meteor, LocalState, Collections} = context();
+ const {LocalState} = context();
 
  const errorFields = {
   message: LocalState.get('message-error', null),

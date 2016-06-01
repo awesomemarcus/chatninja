@@ -8,7 +8,7 @@ if [ "$1" == "" ]; then
 fi
 
 if [ "$1" == "run" ]; then
-  if [ ! -d "node_folders" ]; then
+  if [ ! -d "node_modules" ]; then
     echo "ERROR: Remember to run 'npm install' on first run and updates"
     exit
   fi

@@ -1,6 +1,8 @@
 import React from 'react';
 import {$} from 'meteor/jquery';
 import MessagesBox from './messages_box.jsx';
+import MessagesSend from './messages_send.jsx';
+import UsersOnline from '../../users/containers/users_online.js';
 
 class MessagesLayout extends React.Component {
 
@@ -14,23 +16,7 @@ class MessagesLayout extends React.Component {
       <div id="wrapper">
         <div id="sidebar-wrapper" className="col-md-2">
           <div id="sidebar">
-              <ul className="nav list-group">
-                  <li>
-                      <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 1</a>
-                  </li>
-                  <li>
-                      <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 2</a>
-                  </li>
-                  <li>
-                      <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 9</a>
-                  </li>
-                  <li>
-                      <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 10</a>
-                  </li>
-                  <li>
-                      <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 11</a>
-                  </li>
-              </ul>
+              <UsersOnline />
           </div>
         </div>
 
@@ -38,14 +24,7 @@ class MessagesLayout extends React.Component {
           <MessagesBox />
 
           <div className="col-md-12 footer">
-            <div className="sending-message">
-              <textarea type="text" className="message-input" placeholder="Type message..."></textarea>
-                <button>
-                  <svg id="send-ico"	 viewBox="0 0 26.5 22.9">
-                    <polygon points="5.8,0 26.5,12.4 5.3,22.9 6.6,14.8 0,10.4 11.3,10.4 6.4,7.7 "/>
-                  </svg>
-                </button>
-            </div>
+            <MessagesSend />
           </div>
 
         </div>
