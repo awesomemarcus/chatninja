@@ -6,28 +6,30 @@ class MessagesSend extends React.Component{
   e.preventDefault();
 
   // generating a message id for recepient's copy of message (current user's id + recepient_id )
-  const senderId = Meteor.userId() + 'QNee4Es2Lqf2bPCNg';
+  const toId = 'QNee4Es2Lqf2bPCNg';
 
   // generating message id for recepient's copy of message (recepient_id + current user's id)
-  const receiverId = 'QNee4Es2Lqf2bPCNg' + Meteor.userId();
+  const fromId = Meteor.userId();
 
   const {messageSend, validateMessage} = this.props;
 
   // validating the message field
   validateMessage(this.refs.message.value);
 
-  messageSend(senderId, receiverId, this.refs.message.value, Meteor.userId());
+  messageSend(fromId, toId, this.refs.message.value, Meteor.userId());
 
  }
  render(){
 
 
   return (
-   <div>
-     <form action="">
-      <textarea ref="message" id="" cols="30" rows="10"></textarea>
-      <button onClick={this.handleMessageSend.bind(this)}>Send</button>
-     </form>
+   <div className="sending-message">
+      <textarea ref="message" type="text" className="message-input" placeholder="Type message..."></textarea>
+        <button onClick={this.handleMessageSend.bind(this)}>
+          <svg id="send-ico"	 viewBox="0 0 26.5 22.9">
+            <polygon points="5.8,0 26.5,12.4 5.3,22.9 6.6,14.8 0,10.4 11.3,10.4 6.4,7.7 "/>
+          </svg>
+        </button>
    </div>
   )
  }

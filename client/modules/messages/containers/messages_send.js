@@ -10,7 +10,7 @@ export const composer = ({context}, onData) => {
   message: LocalState.get('message-error', null),
  }
 
-  onData(null, {errorFields});
+ onData(null, {errorFields});
 };
 
 export const depsMapper = (context, actions) => ({

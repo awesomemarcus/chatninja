@@ -8,14 +8,14 @@ if [ "$1" == "" ]; then
 fi
 
 if [ "$1" == "run" ]; then
-  if [ ! -d "node_folders" ]; then
+  if [ ! -d "node_modules" ]; then
     echo "ERROR: Remember to run 'npm install' on first run and updates"
     exit
   fi
 fi
 
 # SETTING MONGO
-export MONGO_URL=mongodb://localhost:27017/mantraboilerplate_local
+export MONGO_URL=mongodb://localhost:27017/teamproject3
 PORT=3010
 echo MONGO: $MONGO_URL
 

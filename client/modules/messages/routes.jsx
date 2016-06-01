@@ -8,7 +8,7 @@ import MessagesLayout from './components/messages_layout';
 export default function (injectDeps, {FlowRouter}) {
   const MainLayoutCtx = injectDeps(MainLayout);
 
-  FlowRouter.route('/messages/send', {
+  FlowRouter.route('/test/message/send', {
     name: 'messages.send',
     action() {
       mount(MainLayoutCtx, {
@@ -16,6 +16,7 @@ export default function (injectDeps, {FlowRouter}) {
       });
     },
   });
+
 
   FlowRouter.route('/inbox', {
     name: 'inbox',

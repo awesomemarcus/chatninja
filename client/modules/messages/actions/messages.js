@@ -1,24 +1,17 @@
 import {MessageSchem} from '/lib/collections/messages';
 
 export default {
-  messageSend({Meteor}, senderId, receiverId, message, fromUser){
+  messageSend({Meteor}, fromId, toId, message){
 
-   const messageDataArray = [
+   const messageDataArray =
     {
-     messageId: senderId,
      message: message,
-     fromUser: fromUser,
+     fromUser: fromId,
+     toUser: toId,
      read: false,
+     deleted: [],
      createdAt: new Date(),
-    },
-    {
-     messageId: receiverId,
-     message: message,
-     fromUser: fromUser,
-     read: false,
-     createdAt: new Date(),
-    },
-   ];
+    }
 
    Meteor.call('messagesSend', messageDataArray);
   },

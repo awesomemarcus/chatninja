@@ -5,14 +5,17 @@ import {Meteor} from 'meteor/meteor';
 export default function () {
   Meteor.methods({
     'messagesSend'(messageData) {
-     const bulkOp = Messages.rawCollection().initializeUnorderedBulkOp();
-     check(messageData, Array);
+     check(messageData, Object);
 
-     messageData.forEach(function(data){
-      bulkOp.insert(data);
-     });
+     Messages.insert(messageData);
 
-     bulkOp.execute()
+     // const bulkOp = Messages.rawCollection().initializeUnorderedBulkOp();
+     //
+     // messageData.forEach(function(data){
+     //  bulkOp.insert(data);
+     // });
+     //
+     // bulkOp.execute()
     },
   });
 }
