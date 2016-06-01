@@ -15,7 +15,7 @@ if [ "$1" == "run" ]; then
 fi
 
 # SETTING MONGO
-export MONGO_URL=mongodb://localhost:27017/mantraboilerplate_local
+export MONGO_URL=mongodb://localhost:27017/teamproject3
 PORT=3010
 echo MONGO: $MONGO_URL
 
