@@ -19,8 +19,8 @@ class UsersList extends React.Component{
           <span style={{color: 'gray'}} className="glyphicon glyphicon-one-fine-dot"></span>
           }
           </h4>
-          {(user.status.online && user.status.idle) ?
-            <p>Last Activity: {user.status.lastActivity}</p> :
+          {(user.status.idle) ?
+            <p style={{fontSize: '12px'}}>Active: {moment(user.status.lastActivity).startOf('hour').fromNow()}</p> :
             ""
           }
         </div>

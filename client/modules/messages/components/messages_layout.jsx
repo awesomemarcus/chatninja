@@ -14,23 +14,23 @@ class MessagesLayout extends React.Component {
       <div id="wrapper">
         <div id="sidebar-wrapper" className="col-md-2">
           <div id="sidebar">
-              <ul className="nav list-group">
-                  <li>
-                      <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 1</a>
-                  </li>
-                  <li>
-                      <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 2</a>
-                  </li>
-                  <li>
-                      <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 9</a>
-                  </li>
-                  <li>
-                      <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 10</a>
-                  </li>
-                  <li>
-                      <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>Sidebar Item 11</a>
-                  </li>
-              </ul>
+            <ul className="nav list-group">
+                <li>
+                    <a className="list-group-item" href="#">Sidebar Item 1</a>
+                </li>
+                <li>
+                    <a className="list-group-item" href="#">Sidebar Item 2</a>
+                </li>
+                <li>
+                    <a className="list-group-item" href="#">Sidebar Item 9</a>
+                </li>
+                <li>
+                    <a className="list-group-item" href="#">Sidebar Item 10</a>
+                </li>
+                <li>
+                    <a className="list-group-item" href="#">Sidebar Item 11</a>
+                </li>
+            </ul>
           </div>
         </div>
 

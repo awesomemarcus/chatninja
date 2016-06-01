@@ -13,7 +13,7 @@ class NavBar extends React.Component {
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
                 </button>
-                <a className="navbar-brand" href="#" style={{fontFamily: "'Slackey', cursive"}}>ChatNinja</a>
+                <a className="navbar-brand" href="/" style={{fontFamily: "'Slackey', cursive"}}>ChatNinja</a>
               </div>
 
 
