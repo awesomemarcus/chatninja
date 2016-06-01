@@ -24,7 +24,7 @@ app.loadModule(messagesModule);
 app.init();
 
 //Site Title
-var title = 'Mantra Boilerplate';
+var title = 'ChatNinja';
 DocHead.setTitle(title);
 
 // Loading Javascript
@@ -36,7 +36,7 @@ var cssLink = {rel: "stylesheet", href: '/bootstrap-3.3.6/css/bootstrap.min.css'
 DocHead.addLink(cssLink);
 
 // Loading Meta tag
-var metaInfo = {name: "description", content: "Mantra Boilerplate"};
+var metaInfo = {name: "description", content: "Chat Ninja"};
 DocHead.addMeta(metaInfo);
 
 // Mobile View

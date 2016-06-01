@@ -1,0 +1,35 @@
+.user-thumb {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+.user-thumb:hover {
+  text-decoration: inherit;
+}
+
+.thumbnail:hover {
+  background-color: #e9e9e9 !important;
+}
+
+.avatar-lg img {
+  width: 100px;
+  height: 100px;
+  -moz-border-radius: 10%;
+  -webkit-border-radius: 10%;
+  border-radius: 10%;
+}
+
+.thumbnail {
+  background-color: #fff !important;
+  border-radius: 5% !important;
+  border-color: #e9e9e9 !important;
+}
+
+.glyphicon.glyphicon-one-fine-dot {
+    margin-bottom: 1em;
+    overflow: hidden;
+}
+.glyphicon.glyphicon-one-fine-dot:before {
+    content:"\25cf";
+    font-size: 1em;
+}

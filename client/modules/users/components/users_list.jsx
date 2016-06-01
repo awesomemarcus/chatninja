@@ -8,12 +8,19 @@ class UsersList extends React.Component{
 
   return(
    <div>
-    <div className="row">
-      {users.map( user => (
-        <div className="col-sm-6 col-md-3" key={user._id} >
-          <UsersItem user={user} />
+     <div className="container marginTop">
+       <div className="row">
+        <div className="col-md-12">
+          <h2>All Ninjas</h2>
         </div>
-      ))}
+       </div>
+      <div className="row">
+        {users.map( user => (
+          <div className="col-sm-6 col-md-3" key={user._id} >
+            <UsersItem user={user} />
+          </div>
+        ))}
+      </div>
     </div>
    </div>
   );
