@@ -20,6 +20,7 @@ body {
     height: 100%;
     overflow-y: auto;
     padding: 0 15px;
+    overflow-x: hidden;
 }
 #sidebar-wrapper {
     height: 100%;
@@ -135,8 +136,5 @@ body {
 
 #main ul{
   list-style-type: none;
-  margin-left: auto;
-  bottom:     0;
-  position: absolute;
-  width: 90%;
+  padding-right: 30px;
 }

@@ -1,13 +1,20 @@
 import React from 'react';
-import {$} from 'meteor/jquery';
-import MessagesBox from './messages_box.jsx';
-import MessagesSend from './messages_send.jsx';
+import MessagesBox from '../containers/messages_box.js';
+import MessagesSend from '../containers/messages_send.js';
 import UsersOnline from '../../users/containers/users_online.js';
 
 class MessagesLayout extends React.Component {
 
-  componentDidMount() {
-    $('#main').animate({scrollTop: 1000000});
+  componentWillMount(){
+   this.setState({
+    recipientId: null,
+   });
+  }
+
+  handleRecipientId(recipientId){
+   this.setState({
+    recipientId: recipientId,
+   })
   }
 
   render() {
@@ -17,19 +24,31 @@ class MessagesLayout extends React.Component {
         <div id="sidebar-wrapper" className="col-md-2">
           <div id="sidebar">
 
-              <UsersOnline />
+              <UsersOnline onhandleRecipientId={this.handleRecipientId.bind(this)}/>
 
           </div>
         </div>
 
+        {this.state.recipientId ?
         <div id="main-wrapper" className="col-xs-12 col-sm-12 col-md-10 pull-right">
-          <MessagesBox />
+
+          <MessagesBox recipientId={this.state.recipientId}/>
 
           <div className="col-md-12 footer">
-            <MessagesSend />
+            <MessagesSend recipientId={this.state.recipientId}/>
           </div>
 
-        </div>
+        </div> :
+        <div id="main-wrapper" className="col-xs-12 col-sm-12 col-md-10 pull-right">
+
+          <div className="marginTop" style={{textAlign: 'center'}}>
+            <h2>ChatNinja is a great tool to have awesome conversations!</h2>
+            <h4>You may also use this to annoy anyone. Haha!</h4>
+            <p>Click a username on the left to initiate chat.</p>
+          </div>
+
+        </div>}
+
       </div>
 
     </div>
