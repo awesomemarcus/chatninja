@@ -1,4 +1,5 @@
 import React from 'react';
+import MessagesListRow from './messages_list_row.jsx';
 
 // const MessagesBox = ({msg}) => (
 //   <div id="main">
@@ -9,23 +10,24 @@ import React from 'react';
 //   </div>
 // );
 
-const MessagesBox = () => (
-  <div id="main">
-    <ul>
-      <li><p className="bubble you">Hi Marcus!</p></li>
-      <li><p className="bubble me">Zup?</p></li>
-      <li><p className="bubble you">Hi Marcus!</p></li>
-      <li><p className="bubble me">Zup?</p></li>
-      <li><p className="bubble you">Hi Marcus!</p></li>
-      <li><p className="bubble me">Zup?</p></li>
-      <li><p className="bubble you">Hi Marcus!</p></li>
-      <li><p className="bubble me">Zup?</p></li>
-      <li><p className="bubble you">Hi Marcus!</p></li>
-      <li><p className="bubble me">Zup?</p></li>
-      <li><p className="bubble you">Hi Marcus!</p></li>
-      <li><p className="bubble me">Zup?</p></li>
-    </ul>
-  </div>
-);
+class MessagesBox extends React.Component{
+ render(){
+  const {messages} = this.props;
+
+  return(
+   <div id="main">
+     <ul>
+      {messages.map( message => (
+
+       <MessagesListRow key={message._id} message={message}/>
+
+      ))}
+     </ul>
+   </div>
+  );
+
+ }
+}
+
 
 export default MessagesBox;

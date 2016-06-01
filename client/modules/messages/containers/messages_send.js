@@ -2,12 +2,12 @@ import {useDeps, composeAll, composeWithTracker} from 'mantra-core';
 
 import MessagesSend from '../components/messages_send.jsx';
 
-export const composer = ({context}, onData) => {
+export const composer = ({context, recipientId}, onData) => {
 
  const {LocalState} = context();
 
  const errorFields = {
-  message: LocalState.get('message-error', null),
+  message: LocalState.get('MESSAGE_ERROR', null),
  }
 
  onData(null, {errorFields});

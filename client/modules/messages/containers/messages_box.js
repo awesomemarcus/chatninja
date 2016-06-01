@@ -1,12 +1,12 @@
 import {useDeps, composeAll, composeWithTracker} from 'mantra-core';
 
-import MessagesBox from '../components/messages_send';
+import MessagesBox from '../components/messages_box.jsx';
 
-export const composer = ({context, recepientId}, onData) => {
+export const composer = ({context, recipientId}, onData) => {
   const {Meteor, Collections} = context();
 
-  if(Meteor.subscribe('getMessages', Meteor.userId(), recepientId).ready()){
-   const messages = Collections.Messages.find({}, {sort:{createdAt: -1}}).fetch();
+  if(Meteor.subscribe('getMessages', Meteor.userId(), recipientId).ready()){
+   const messages = Collections.Messages.find({}, {sort:{createdAt: 1}}).fetch();
 
    onData(null, {messages});
 

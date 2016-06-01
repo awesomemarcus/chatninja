@@ -4,20 +4,23 @@ class MessagesSend extends React.Component{
 
  handleMessageSend(e){
   e.preventDefault();
+  const {recipientId, messageSend, validateMessage, errorFields} = this.props;
 
-  // generating a message id for recepient's copy of message (current user's id + recepient_id )
-  const toId = 'QNee4Es2Lqf2bPCNg';
+  const toId = recipientId;
 
-  // generating message id for recepient's copy of message (recepient_id + current user's id)
   const fromId = Meteor.userId();
 
-  const {messageSend, validateMessage} = this.props;
 
   // validating the message field
   validateMessage(this.refs.message.value);
 
-  messageSend(fromId, toId, this.refs.message.value, Meteor.userId());
+  if(!errorFields.message){
+   messageSend(fromId, toId, this.refs.message.value, Meteor.userId());
+  }
 
+ }
+ testSend(e){
+  e.preventDefault();
  }
  render(){
 

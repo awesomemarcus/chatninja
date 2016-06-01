@@ -1,6 +1,14 @@
 import React from 'react';
+import UsersOnlineRow from './users_online_row.jsx';
 
 class UsersOnline extends React.Component{
+
+ handleUserClick(recipientId){
+
+  this.props.onhandleRecipientId(recipientId);
+
+ }
+
  render(){
 
   const {onlineUsers} = this.props;
@@ -8,9 +16,7 @@ class UsersOnline extends React.Component{
   return(
    <ul className="nav list-group">
     {onlineUsers.map( user => (
-     <li>
-         <a className="list-group-item" href="#"><i className="icon-home icon-1x"></i>{user.profile.username}</a>
-     </li>
+     <UsersOnlineRow onUserClick={this.handleUserClick.bind(this)} key={user._id} user={user} />
     ))}
 
    </ul>
