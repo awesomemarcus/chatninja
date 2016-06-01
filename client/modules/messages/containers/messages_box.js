@@ -7,7 +7,6 @@ export const composer = ({context, recepientId}, onData) => {
 
   if(Meteor.subscribe('getMessages', Meteor.userId(), recepientId).ready()){
    const messages = Collections.Messages.find({}, {sort:{createdAt: -1}}).fetch();
-   console.log(messages);
 
    onData(null, {messages});
 
@@ -15,8 +14,8 @@ export const composer = ({context, recepientId}, onData) => {
 
 };
 
-export const depsMapper = (context, actions) => ({
-  context: () => context
+export const depsMapper = (context) => ({
+  context: () => context,
 });
 
 export default composeAll(
