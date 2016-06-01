@@ -3,7 +3,7 @@ import MessagesListRow from './messages_list_row.jsx';
 import {$} from 'meteor/jquery';
 
 class MessagesBox extends React.Component{
-  componentDidMount() {
+  componentWillReceiveProps() {
     $('#main').animate({scrollTop: 1000000});
   }
 
