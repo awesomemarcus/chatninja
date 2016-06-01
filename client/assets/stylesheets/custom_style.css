@@ -1,24 +1,26 @@
-/*.marginTop {
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Exo:400,200,300);
+@import url(https://fonts.googleapis.com/css?family=Slackey);
+.marginTop {
   margin-top: 100px;
 }
 
 body {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #eee;
-}*/
+  background-color: #f9f9f9 !important;
+  font-family: 'Exo', sans-serif !important;
+  font-weight: 300 !important;
+}
 
 .form-signin {
   max-width: 330px;
   padding: 15px;
-  margin: 0 auto;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
   margin-bottom: 10px;
 }
 .form-signin .checkbox {
-  font-weight: normal;
+  font-weight: inherit;
 }
 .form-signin .form-control {
   position: relative;
@@ -41,6 +43,14 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+button {
+  border-radius: 0 !important;
+}
+
+a {
+  border-radius: 0 !important;
 }
 
 hr {

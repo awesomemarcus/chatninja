@@ -3,7 +3,7 @@ import {Meteor} from 'meteor/meteor';
 class NavBar extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-default navbar-fixed-top">
+      <nav className="navbar navbar-inverse navbar-fixed-top">
             <div className="container-fluid">
 
               <div className="navbar-header">
@@ -13,14 +13,14 @@ class NavBar extends React.Component {
                   <span className="icon-bar"></span>
                   <span className="icon-bar"></span>
                 </button>
-                <a className="navbar-brand" href="#">Mantra Boilerplate</a>
+                <a className="navbar-brand" href="#" style={{fontFamily: "'Slackey', cursive"}}>ChatNinja</a>
               </div>
 
 
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav">
-                  <li><a href="/categories/list">Categories</a></li>
-                  <li><a href="/products/list">Products</a></li>
+                  <li><a href="/inbox">Inbox</a></li>
+                  <li><a href="/myprofile">My Profile</a></li>
                 </ul>
 
                 <ul className="nav navbar-nav navbar-right">
@@ -47,7 +47,7 @@ class NavBar extends React.Component {
 }
 
 export const NavBarLogOut = () => (
-  <nav className="navbar navbar-default navbar-fixed-top">
+  <nav className="navbar navbar-inverse navbar-fixed-top">
         <div className="container-fluid">
 
           <div className="navbar-header">
@@ -57,20 +57,8 @@ export const NavBarLogOut = () => (
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>
             </button>
-            <a className="navbar-brand" href="#">Mantra Boilerplate</a>
+            <a className="navbar-brand" href="#" style={{fontFamily: "'Slackey', cursive"}} >ChatNinja</a>
           </div>
-
-
-          <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul className="nav navbar-nav navbar-right">
-                  <li><a href="/users/signup">Signup</a></li>
-                  <li><a href="/users/login">Login</a></li>
-            </ul>
-
-
-          </div>
-
-
 
 
         </div>

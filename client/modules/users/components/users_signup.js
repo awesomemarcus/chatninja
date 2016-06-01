@@ -4,7 +4,7 @@ class UsersSignup extends React.Component {
   render() {
     const  {errorField} = this.props;
     return(
-      <div className="container">
+      <div className="container marginTop">
         <div className="col-sm-8 col-sm-offset-2">
 
           <h2>User Signup</h2>

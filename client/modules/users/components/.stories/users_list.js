@@ -17,6 +17,7 @@ storiesOf('Users Item', module)
         online: true,
         idle: false,
         offline: false,
+        lastActivity: '2 mins ago',
       }
     };
 
@@ -38,6 +39,7 @@ storiesOf('Users Item', module)
         online: true,
         idle: true,
         offline: false,
+        lastActivity: '2 mins ago',
       }
     };
 
@@ -59,6 +61,7 @@ storiesOf('Users Item', module)
         online: false,
         idle: false,
         offline: true,
+        lastActivity: '2 mins ago',
       }
     };
 

@@ -10,14 +10,18 @@ class UsersList extends React.Component{
   return(
    <div>
     <a href="" className="user-thumb">
-      <div className="thumbnail avatar-lg" >
-          <img src="http://s13.postimg.org/ih41k9tqr/img1.jpg" alt="" className="img-responsive"/>
-        <div className="caption" style={{textAlign: 'center'}}>
-          <h3>{user.profile.username}</h3>
-          {(user.status.online && !user.status.idle) ? <p style={{color: 'green'}}><strong>ACTIVE</strong></p> :
-          (user.status.online && user.status.idle) ? <div><p style={{color: 'gold'}}><strong>IDLE</strong></p>
-          <p>Last Activity: {moment(user.status.lastActivity).format("dddd, MMMM Do YYYY, h:mm:ss a")}</p></div> :
-          <p style={{color: 'gray'}}><strong>OFFLINE</strong></p>
+      <div className="thumbnail avatar-lg clearfix" >
+          <img src="http://s13.postimg.org/ih41k9tqr/img1.jpg" alt="" className="img-responsive pull-left"/>
+        <div className="caption pull-right" style={{textAlign: 'center'}}>
+          <h4>{user.profile.username}
+          {(user.status.online && !user.status.idle) ? <span style={{color: 'green'}} className="glyphicon glyphicon-one-fine-dot"></span> :
+          (user.status.online && user.status.idle) ? <span style={{color: 'orange'}} className="glyphicon glyphicon-one-fine-dot"></span> :
+          <span style={{color: 'gray'}} className="glyphicon glyphicon-one-fine-dot"></span>
+          }
+          </h4>
+          {(user.status.online && user.status.idle) ?
+            <p>Last Activity: {user.status.lastActivity}</p> :
+            ""
           }
         </div>
       </div>
