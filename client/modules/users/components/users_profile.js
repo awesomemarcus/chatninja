@@ -1,4 +1,5 @@
 import React from 'react';
+import ImagesUpload from '../../uploads/containers/images_upload.js';
 
 class UsersProfile extends React.Component{
   render() {
@@ -8,18 +9,21 @@ class UsersProfile extends React.Component{
       <div className="container">
         <h2>{user.profile.username}'s Profile</h2>
         <hr />
-        <div className="col-sm-3">
-          <div className="profile-pic-wrapper"></div>
+        <div className="col-sm-3 col-sm-offset-3">
+            {user.profile.avatar ?
+              <img src={user.profile.avatar} alt="" className="img-responsive"/> :
+              <p>no photo</p>
+            }
         </div>
-        <div className="col-sm-9">
+        <div className="col-sm-6">
           <p className="large-font"><span className="text-warning">Firstname:</span> {user.profile.firstname}</p>
           <p className="large-font"><span className="text-warning">Lastname:</span> {user.profile.lastname}</p>
           <p className="large-font"><span className="text-warning">Gender:</span> {user.profile.gender}</p>
           <p className="large-font"><span className="text-warning">Age:</span> {user.profile.age}</p>
 
           {this.currentUserProfile() ?
-            <a href="/users/update/" className="btn btn-lg btn-default">Edit Profile</a>
-            : <button className="btn btn-lg btn-warning">Block User</button>}
+            <ImagesUpload onUploadPhoto={this.changeAvatar.bind(this)}/>
+            : ""}
 
         </div>
       </div>
@@ -38,6 +42,12 @@ class UsersProfile extends React.Component{
     return result;
 
   }
+
+  changeAvatar(imgPath) {
+    const {userUpdatePhoto} = this.props;
+    userUpdatePhoto(imgPath)
+  }
+
 }
 
 export default UsersProfile;

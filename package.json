@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "domready": "^1.0.8",
+    "jquery": "^2.2.4",
     "mantra-core": "^1.5.0",
     "meteor-node-stubs": "^0.2.3",
     "moment": "^2.13.0",

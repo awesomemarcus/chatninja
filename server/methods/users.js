@@ -14,6 +14,7 @@ Meteor.startup(()=>{
            user.profile.lastname = options["profile.lastname"];
            user.profile.gender = options["profile.gender"];
            user.profile.age = options["profile.age"];
+           user.profile.avatar = options["profile.avatar"];
            user.modifiedAt = options["modifiedAt"];
            user.createdAt = options["createdAt"];
            return user;
@@ -49,6 +50,7 @@ export default function () {
        "profile.lastname" : formData["profile.lastname"],
        "profile.gender" : formData["profile.gender"],
        "profile.age" : formData["profile.age"],
+       "profile.avatar" : "/avatar.png",
        modifiedAt : new Date(),
        createdAt : new Date(),
      });

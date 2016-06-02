@@ -95,7 +95,9 @@ export default {
   },
   userUpdatePhoto({Meteor}, avatarPhoto){
 
-   Meteor.call('userPhotoUpdate', avatarPhoto);
+   setTimeout(function(){
+     Meteor.call('usersUpdatePhoto', avatarPhoto);
+   },1000);
 
   },
   clearErrors({LocalState}){

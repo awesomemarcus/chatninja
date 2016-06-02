@@ -11,15 +11,16 @@ class ImagesUpload extends React.Component{
   image.value = '';
 
   // returns path of the uploaded image.
-  console.log(uploadedImage);
+  this.props.onUploadPhoto(uploadedImage);
  }
 
  render(){
 
   return(
-   <div className="form-group">
-     <input type="file" ref="image" id="image" name="" className="form-control" accept="image/*" onChange={this.handleUpload.bind(this)}/>
-   </div>
+     <span className="btn btn-default btn-file">
+        Change Avatar
+        <input type="file" ref="image" id="image" name="" className="form-control" accept="image/*" onChange={this.handleUpload.bind(this)}/>
+     </span>
   );
  }
 }

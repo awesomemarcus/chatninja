@@ -15,7 +15,8 @@ export const composer = ({context}, onData) => {
  }
 };
 
-export const depsMapper = (context) => ({
+export const depsMapper = (context, actions) => ({
+  userUpdatePhoto:actions.users.userUpdatePhoto,
   context: () => context,
 });
 
