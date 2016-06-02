@@ -1,0 +1,24 @@
+.modal-content {
+  background-color: #383838 !important;
+  opacity: .8;
+  color: #fff !important;
+  border-radius: 0 !important;
+}
+
+.modal-footer {
+  border-top: none !important;
+}
+
+.modal-content button {
+  color: #fff !important;
+  background-color: transparent !important;
+}
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.07s linear;
+     -moz-transition: opacity 0.07s linear;
+      -ms-transition: opacity 0.07s linear;
+       -o-transition: opacity 0.07s linear;
+          transition: opacity 0.07s linear;
+}

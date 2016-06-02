@@ -1,4 +1,6 @@
 import React from 'react';
+import {$} from 'meteor/jquery';
+
 
 class MessagesSend extends React.Component{
 
@@ -18,10 +20,17 @@ class MessagesSend extends React.Component{
    messageSend(fromId, toId, this.refs.message.value, Meteor.userId());
   }
 
+  $('#main').animate({scrollTop: 1000000});
+  this.refs.message.value = "";
+
  }
+
  testSend(e){
   e.preventDefault();
  }
+
+
+
  render(){
 
 

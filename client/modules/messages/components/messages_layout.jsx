@@ -34,14 +34,27 @@ class MessagesLayout extends React.Component {
           </div>
         </div>
 
+        {this.state.recipientId ?
         <div id="main-wrapper" className="col-xs-12 col-sm-12 col-md-10 pull-right">
-         {this.state.recipientId ? <MessagesBox recipientId={this.state.recipientId}/> : ''}
+
+          <MessagesBox recipientId={this.state.recipientId}/>
+
 
           <div className="col-md-12 footer">
             <MessagesSend recipientId={this.state.recipientId}/>
           </div>
 
-        </div>
+        </div> :
+        <div id="main-wrapper" className="col-xs-12 col-sm-12 col-md-10 pull-right">
+
+          <div className="marginTop" style={{textAlign: 'center'}}>
+            <h2>ChatNinja is a great tool to have awesome conversations!</h2>
+            <h4>You may also use this to annoy anyone. Haha!</h4>
+            <p>Click a username on the left to initiate chat.</p>
+          </div>
+
+        </div>}
+
       </div>
 
     </div>

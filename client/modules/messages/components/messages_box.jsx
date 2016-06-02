@@ -1,33 +1,30 @@
 import React from 'react';
 import MessagesListRow from './messages_list_row.jsx';
-
-// const MessagesBox = ({msg}) => (
-//   <div id="main">
-//     <ul>
-//       <li><p className="bubble you">{msg.to}</p></li>
-//       <li><p className="bubble me">{msg.from}</p></li>
-//     </ul>
-//   </div>
-// );
+import {$} from 'meteor/jquery';
 
 class MessagesBox extends React.Component{
- render(){
-  const {messages} = this.props;
+  componentWillReceiveProps() {
+    $('#main').animate({scrollTop: 1000000});
+  }
 
-  return(
-   <div id="main">
-     <ul>
-      {messages.map( message => (
+  render(){
+    const {messages} = this.props;
 
-       <MessagesListRow key={message._id} message={message}/>
+    return(
+     <div id="main">
+       <ul>
+        {messages.map( message => (
 
-      ))}
-     </ul>
-   </div>
-  );
+         <MessagesListRow key={message._id} message={message}/>
 
- }
+        ))}
+       </ul>
+     </div>
+    );
+
+  }
 }
+
 
 
 export default MessagesBox;
