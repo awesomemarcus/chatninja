@@ -11,7 +11,7 @@ Tracker.autorun(function(){
   try {
    UserStatus.startMonitor({
     threshold: 6000,
-    interval: 50000,
+    interval: 5000,
    });
   } catch(err) {
     return err;
