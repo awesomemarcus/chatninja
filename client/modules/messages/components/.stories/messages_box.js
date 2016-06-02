@@ -1,15 +1,29 @@
 import React from 'react';
 import { storiesOf, action } from '@kadira/storybook';
-import MessagesBox from '../messages_box.jsx';
+import MessagesBox from '../messages_box';
 
-storiesOf('Message Box', module)
-  .add('Message', () => {
-    const msg = {
-      from: 'Hi there!',
-      to: 'Who are you?'
-    };
+storiesOf('Messages Box', module)
+  .add('My sent message', () => {
+    const messages = [
+      {
+        fromUser: "default",
+        message: 'I typed this message. :) :skull:'
+      },
+    ];
 
     return (
-      <MessagesBox msg={msg} />
+      <MessagesBox messages={messages} myId="default" />
+    );
+  })
+  .add('Message from other user', () => {
+    const messages = [
+      {
+        fromUser: "notuser",
+        message: 'This message is from the other user. :headphones:'
+      },
+    ];
+
+    return (
+      <MessagesBox messages={messages} myId="default" />
     );
   });

@@ -1,6 +1,6 @@
 import React from 'react';
 import MessagesListRow from './messages_list_row.jsx';
-import {$} from 'meteor/jquery';
+import $ from 'jquery';
 
 class MessagesBox extends React.Component{
   componentDidMount() {
@@ -8,15 +8,13 @@ class MessagesBox extends React.Component{
   }
 
   render(){
-    const {messages} = this.props;
+    const {messages, myId} = this.props;
 
     return(
      <div id="main">
        <ul>
         {messages.map( message => (
-
-         <MessagesListRow key={message._id} message={message}/>
-
+         <MessagesListRow key={message._id} message={message} myId={myId} />
         ))}
        </ul>
      </div>

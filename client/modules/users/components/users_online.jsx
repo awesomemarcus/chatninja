@@ -3,9 +3,9 @@ import UsersOnlineRow from './users_online_row.jsx';
 
 class UsersOnline extends React.Component{
 
- handleUserClick(recipientId){
+ handleUserClick(recipient){
 
-  this.props.onhandleRecipientId(recipientId);
+  this.props.onhandleRecipientId(recipient);
 
  }
 

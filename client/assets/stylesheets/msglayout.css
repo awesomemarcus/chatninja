@@ -12,7 +12,7 @@ body {
     display: inline-block;
 }
 #main-wrapper {
-    height: calc(100% - 86px);
+    height: calc(100% - 140px);
     padding: 50px 0 0px 0;
 }
 #main {
@@ -21,6 +21,7 @@ body {
     overflow-y: auto;
     padding: 0 15px;
     overflow-x: hidden;
+    background-color: #fff;
 }
 #sidebar-wrapper {
     height: 100%;
@@ -71,7 +72,7 @@ body {
 	}
 }
 .footer {
-    background-color: #d3d3d3;
+    background-color: #9d9d9d;
 	  bottom:0;
   	position:fixed;
     padding:10px;
@@ -137,4 +138,8 @@ body {
 #main ul{
   list-style-type: none;
   padding-right: 30px;
+}
+
+#main-wrapper h3, #main-wrapper p {
+  display: inline;
 }
