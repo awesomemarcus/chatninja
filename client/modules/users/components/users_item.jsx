@@ -11,18 +11,23 @@ class UsersList extends React.Component{
    <div>
     <a href="" className="user-thumb">
       <div className="thumbnail avatar-lg clearfix" >
-          <img src="http://s13.postimg.org/ih41k9tqr/img1.jpg" alt="" className="img-responsive pull-left"/>
+
+          <img src={user.profile.avatar} alt="" className="img-responsive pull-left"/>
+
         <div className="caption pull-right" style={{textAlign: 'center'}}>
           <h4>{user.profile.username}
+
           {(user.status.online && !user.status.idle) ? <span style={{color: 'green'}} className="glyphicon glyphicon-one-fine-dot"></span> :
           (user.status.online && user.status.idle) ? <span style={{color: 'orange'}} className="glyphicon glyphicon-one-fine-dot"></span> :
           <span style={{color: 'gray'}} className="glyphicon glyphicon-one-fine-dot"></span>
           }
           </h4>
+
           {(user.status.idle) ?
-            <p style={{fontSize: '12px'}}>Active: {moment(user.status.lastActivity).fromNow()}</p> :
+            <p style={{fontSize: '12px'}}>active {moment(user.status.lastActivity).startOf().fromNow()}</p> :
             ""
           }
+
         </div>
       </div>
     </a>

@@ -29,6 +29,7 @@ const fixedData = [
    lastname: 'Doe',
    gender: 'male',
    age: 18,
+   avatar: '/avatar.png',
   },
  },
  {
@@ -40,6 +41,7 @@ const fixedData = [
    lastname: 'Brown',
    gender: 'male',
    age: 18,
+   avatar: '/avatar.png',
   },
  },
  {
@@ -51,6 +53,7 @@ const fixedData = [
    lastname: 'Clara',
    gender: "female",
    age: 18,
+   avatar: '/avatar.png',
   },
  },
  {
@@ -62,6 +65,7 @@ const fixedData = [
    lastname: 'Potter',
    gender: "male",
    age: 18,
+   avatar: '/avatar.png',
   },
  },
  {
@@ -73,6 +77,7 @@ const fixedData = [
    lastname: 'dela Cruz',
    gender: "male",
    age: 18,
+   avatar: '/avatar.png',
   },
  },
 ];

@@ -20,11 +20,11 @@ class NavBar extends React.Component {
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav">
                   <li><a href="/inbox">Inbox</a></li>
-                  <li><a href="/myprofile">My Profile</a></li>
+                  <li><a href={'/users/profile/' + Meteor.userId()}>My Profile</a></li>
                 </ul>
 
                 <ul className="nav navbar-nav navbar-right">
-                      <li><a href="#" onClick={this.logout.bind(this)}>Logout</a></li>
+                      <li><a href="/" onClick={this.logout.bind(this)}>Logout</a></li>
                 </ul>
 
 
