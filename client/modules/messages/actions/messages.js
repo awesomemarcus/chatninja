@@ -32,5 +32,9 @@ export default {
    LocalState.set('MESSAGE_ERROR', null);
   },
 
+  messagesDelete({Meteor}, idToDelete){
+   Meteor.call('deleteMessage', idToDelete, Meteor.userId());
+  },
+
 
 }
