@@ -10,11 +10,11 @@ export default function (injectDeps, {FlowRouter}) {
   const AuthCheckerCtx = injectDeps(AuthChecker);
   const MainLayoutCtx = injectDeps(MainLayout);
 
-  FlowRouter.route('/inbox', {
+  FlowRouter.route('/inbox/:_id', {
     name: 'inbox',
-    action() {
+    action(params) {
       mount(AuthCheckerCtx, {
-        content: () => (<MessagesLayout />),
+        content: () => (<MessagesLayout recipientId={params._id}/>),
         MainLayout: MainLayoutCtx,
       });
     },
