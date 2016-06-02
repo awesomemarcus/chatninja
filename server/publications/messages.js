@@ -3,11 +3,10 @@ import {Meteor} from 'meteor/meteor';
 import {check} from 'meteor/check';
 
 export default function () {
-  Meteor.publish('getMessagedUsers', function (userId, messageId) {
+  Meteor.publish('getMessagedUsers', function (userId) {
    check(userId, String);
-   check(messageId, String);
 
-    return Messages.aggregate([{sort:{createdAt: -1}}, {$match: {messageId: {$regex: userId}}},{$group: {_id:"$fromUser", message:{$first: "$message"}, createdAt: {$first: "$createdat"}}}]);
+    return Messages.aggregate([{$sort:{createdAt: -1}}, {$match: {$or: [{fromUser: userId},{toUser:userId}]}}, {$group: {_id:"$fromUser", fromUser:{$first:"$fromUser"}, toUser:{$first:"$toUser"}, message:{$first:"$message"}}}]);
   });
 
   Meteor.publish('getMessages', function(currentUserId, otherUserId){

@@ -20,7 +20,7 @@ class UsersList extends React.Component{
           }
           </h4>
           {(user.status.idle) ?
-            <p style={{fontSize: '12px'}}>Active: {moment(user.status.lastActivity).startOf('hour').fromNow()}</p> :
+            <p style={{fontSize: '12px'}}>Active: {moment(user.status.lastActivity).fromNow()}</p> :
             ""
           }
         </div>
