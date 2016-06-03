@@ -100,6 +100,15 @@ export default {
    },1000);
 
   },
+
+  filterQuery({LocalState}, textQuery){
+   LocalState.set('filter', textQuery);
+  },
+
+  clearFilter({LocalState}){
+   LocalState.set('filter', null);
+  },
+
   clearErrors({LocalState}){
     LocalState.set("profile.username",null);
     LocalState.set("profile.firstname",null);

@@ -2,6 +2,20 @@ import React from 'react';
 import UsersItem from './users_item.jsx'
 
 class UsersList extends React.Component{
+ componentWillMount(){
+  const {clearFilter} = this.props;
+
+  clearFilter();
+ }
+ handleFilterText(){
+  const {queryFilter} = this.props;
+  const {search} = this.refs;
+
+  const query = {"profile.username": {$regex: search.value, $options: 'i'}};
+
+  queryFilter(query);
+
+  }
  render(){
 
   const {users} = this.props;
@@ -12,7 +26,7 @@ class UsersList extends React.Component{
        <div className="row">
         <div className="col-md-12 ninja">
           <h2>All Ninjas</h2>
-          <input type="text" className="form-control" placeholder="Search..."/>
+          <input type="text" ref="search" className="form-control" placeholder="Search..." onChange={this.handleFilterText.bind(this)}/>
         </div>
        </div>
       <div className="row">
