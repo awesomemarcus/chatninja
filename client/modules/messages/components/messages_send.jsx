@@ -13,13 +13,11 @@ class MessagesSend extends React.Component{
 
   const fromId = Meteor.userId();
 
-  const message = this.refs.message.value.replace(/\n/g, '<br />');
-
   // validating the message field
-  validateMessage(message);
+  validateMessage(this.refs.message.value);
 
   if(!errorFields.message){
-   messageSend(fromId, toId, message, Meteor.userId());
+   messageSend(fromId, toId, this.refs.message.value, Meteor.userId());
   }
 
   $('#main').animate({scrollTop: 1000000});
