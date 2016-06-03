@@ -10,8 +10,9 @@ class UsersList extends React.Component{
    <div>
      <div className="container marginTop">
        <div className="row">
-        <div className="col-md-12">
+        <div className="col-md-12 ninja">
           <h2>All Ninjas</h2>
+          <input type="text" className="form-control" placeholder="Search..."/>
         </div>
        </div>
       <div className="row">

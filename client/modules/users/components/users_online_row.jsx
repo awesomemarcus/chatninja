@@ -12,11 +12,11 @@ class UsersOnlineRow extends React.Component{
    <li>
     <a className="list-group-item" href="#" onClick={this.handleUserClick.bind(this)}>
     <img src={user.profile.avatar} alt="" className="img-responsive pull-left" />
-    <h4>{user.profile.username} <b>{(notifCount > 0) ? notifCount : ''}</b></h4>
+    <h4>{user.profile.username} {(notifCount > 0) ?<span className="badge"><b> {notifCount} </b></span>: ''}</h4>
     </a>
    </li>
   );
- }
+}
 }
 
 export default UsersOnlineRow;

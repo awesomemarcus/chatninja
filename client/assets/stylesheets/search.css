@@ -1,0 +1,18 @@
+.ninja h2, .ninja input {
+  display: inline;
+  vertical-align: middle;
+}
+
+.ninja input {
+  width: 60%;
+  background-color: transparent !important;
+  border: none;
+  margin: 10px;
+  border-radius: 0;
+}
+
+.ninja input:focus {
+    outline: none !important;
+    border-color: #222;
+    box-shadow: 0 0 4px #222;
+}
