@@ -10,7 +10,7 @@ class UsersList extends React.Component{
 
   return(
    <div>
-    <a href={"/inbox/" + user._id} className="user-thumb">
+    <a href={"/chat/" + user._id} className="user-thumb">
       <div className="thumbnail avatar-lg clearfix" >
 
           <img src={user.profile.avatar} alt="" className="pull-left"/>

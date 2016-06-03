@@ -10,7 +10,7 @@ export default function (injectDeps, {FlowRouter}) {
   const AuthCheckerCtx = injectDeps(AuthChecker);
   const MainLayoutCtx = injectDeps(MainLayout);
 
-  FlowRouter.route('/inbox/:_id', {
+  FlowRouter.route('/chat/:_id', {
     name: 'inbox',
     action(params) {
       mount(AuthCheckerCtx, {
