@@ -12,7 +12,7 @@ class UsersList extends React.Component{
     <a href={"/inbox/" + user._id} className="user-thumb">
       <div className="thumbnail avatar-lg clearfix" >
 
-          <img src={user.profile.avatar} alt="" className="img-responsive pull-left"/>
+          <img src={user.profile.avatar} alt="" className="pull-left"/>
 
         <div className="caption pull-right" style={{textAlign: 'center'}}>
           <h4>{user.profile.username}
