@@ -10,6 +10,7 @@ import '/client/assets/stylesheets/products.css';
 import '/client/assets/stylesheets/thumbnail.css';
 import '/client/assets/stylesheets/msglayout.css';
 import '/client/assets/stylesheets/bubble.css';
+import '/client/assets/stylesheets/profile.css';
 
 function loadStories() {
   require('../client/modules/users/components/.stories/');

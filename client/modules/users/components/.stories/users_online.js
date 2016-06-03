@@ -12,6 +12,11 @@ storiesOf('Online Users List', module)
         lastname: "Backend",
         gender: "male",
         age: "25"
+      },
+      status: {
+        online: true,
+        idle: false,
+        offline: false,
       }
     }];
     const messages = [
@@ -40,6 +45,11 @@ storiesOf('Online Users List', module)
         lastname: "Doe",
         gender: "male",
         age: "25"
+      },
+      status: {
+        online: true,
+        idle: false,
+        offline: false,
       }
     }];
     const messages = [

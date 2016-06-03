@@ -16,7 +16,7 @@ storiesOf('Messages Box', module)
     ];
 
     return (
-      <MessagesBox messages={messages} myId="default" />
+      <MessagesBox messages={messages} myId="default" markRead={function(){return;}} />
     );
   })
   .add('Message from other user', () => {
@@ -32,6 +32,6 @@ storiesOf('Messages Box', module)
     ];
 
     return (
-      <MessagesBox messages={messages} myId="default" />
+      <MessagesBox messages={messages} myId="default" markRead={function(){return;}}/>
     );
   });
