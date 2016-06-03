@@ -1,4 +1,7 @@
 import { configure } from '@kadira/storybook';
+import { disable } from 'react-komposer';
+
+disable();
 
 /* import css */
 import '/public/bootstrap-3.3.6/css/bootstrap.min.css';

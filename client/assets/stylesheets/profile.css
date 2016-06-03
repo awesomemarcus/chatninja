@@ -1,0 +1,22 @@
+.profile-final p {
+  font-size: 18px !important;
+  padding: 0 0 0 80px !important;
+}
+
+.profile-final .upload-btn {
+  text-align: center;
+}
+
+.profile-final h3 {
+  text-align: center;
+}
+
+.profile-final img {
+  padding-top: 10px;
+}
+
+.profile-final .thumbnail {
+  border-radius: 0 !important;
+  border-color: #222 !important;
+  border-width: 3px;
+}

@@ -12,8 +12,8 @@ class MessagesListRow extends React.Component{
   return(
     <li>
      {(myId == message.fromUser) ?
-       <p className="bubble me"> {ReactEmoji.emojify(message.message)} <a href="#" style={{fontSize: '12px', color: 'lime'}} data-toggle="modal" data-target={"#myModal" + message._id}>delete</a></p> :
-       <p className="bubble you">{ReactEmoji.emojify(message.message)} <a href="#" style={{fontSize: '12px'}} data-toggle="modal" data-target={"#myModal" + message._id}>delete</a></p>
+       <p className="bubble me"> {ReactEmoji.emojify(message.message.replace(/&lt;br \/&gt;/g, '<br />'))} <a href="#" style={{fontSize: '12px', color: 'lime'}} data-toggle="modal" data-target={"#myModal" + message._id}>delete</a></p> :
+       <p className="bubble you">{ReactEmoji.emojify(decodeURI(message.message))} <a href="#" style={{fontSize: '12px'}} data-toggle="modal" data-target={"#myModal" + message._id}>delete</a></p>
      }
      <DeleteModal idToDelete={message._id}/>
     </li>
