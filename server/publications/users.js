@@ -7,6 +7,7 @@ export default function () {
   });
 
   Meteor.publish('allUsers', function(){
+
    return Meteor.users.find({}, {fields: {emails: 1, profile: 1, status: 1}});
   });
 }

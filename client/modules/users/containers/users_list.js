@@ -3,10 +3,14 @@ import {useDeps, composeAll, composeWithTracker} from 'mantra-core';
 import UsersList from '../components/users_list.jsx';
 
 export const composer = ({context}, onData) => {
-  const {Meteor} = context();
+  const {Meteor, LocalState} = context();
+  const filter = (LocalState.get('filter')) ? LocalState.get('filter') : {};
 
-  if(Meteor.subscribe('allUsers', Meteor.userId).ready()){
-   const users = Meteor.users.find({_id:{$ne:Meteor.userId()}},{sort: {'status.online': -1, 'profile.username': 1}}).fetch();
+  if(Meteor.subscribe('allUsers').ready()){
+   const users = Meteor.users.find({$and:[
+    {_id:{$ne:Meteor.userId()}},
+    filter,
+   ]},{sort: {'status.online': -1, 'profile.username': 1}}).fetch();
 
    onData(null, {users});
   }
@@ -15,7 +19,9 @@ export const composer = ({context}, onData) => {
 
 };
 
-export const depsMapper = (context) => ({
+export const depsMapper = (context, actions) => ({
+  queryFilter: actions.users.filterQuery,
+  clearFilter: actions.users.clearFilter,
   context: () => context,
 });
 
