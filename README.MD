@@ -1,3 +1,14 @@
+# Fixtures:
+##### Email: user1@email.com to user20@email.com 
+##### Password: user12345
+
+###### To run locally:
+
+```sh
+$ meteor run
+```
+
+
 # Mantra BoilerPlate 2
 ###### Topics
 - [Installing Mantra CLI](http://master.snapzio.com/snapzio/mantraboilerplate#installing-mantra-cli)

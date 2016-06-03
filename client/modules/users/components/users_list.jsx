@@ -26,7 +26,7 @@ class UsersList extends React.Component{
        <div className="row">
         <div className="col-md-12 ninja">
           <h2>All Ninjas</h2>
-          <input type="text" ref="search" className="form-control" placeholder="Search..." onChange={this.handleFilterText.bind(this)}/>
+          <input type="text" ref="search" className="form-control" placeholder="Search ninja..." onChange={this.handleFilterText.bind(this)}/>
         </div>
        </div>
       <div className="row">

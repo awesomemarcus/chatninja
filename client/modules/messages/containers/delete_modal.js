@@ -1,6 +1,6 @@
 import {useDeps, composeAll, composeWithTracker} from 'mantra-core';
 
-import DeleteModal from '../components/delete_modal.jsx';
+import DeleteModal from '../components/delete_modal.js';
 
 export const composer = ({context}, onData) => {
 

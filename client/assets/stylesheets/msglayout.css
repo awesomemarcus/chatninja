@@ -1,6 +1,5 @@
 body {
     padding-top: 50px;
-    overflow: hidden;
 }
 #wrapper {
     min-height: 100%;
@@ -102,12 +101,12 @@ body {
   font-size: 16px;
   height: 66px;
   border: none;
-  background: #fffbe7;
+  background: #999;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 .sending-message button:hover {
-  background: #fff3b4;
+  background: #222;
 }
 .sending-message button:focus {
   outline: none;
@@ -127,7 +126,7 @@ body {
 #send-ico {
   width: 22px;
   margin-left: 8px;
-  fill: rgba(0, 0, 0, 0.25);
+  fill: rgba(255, 255, 255, 1);
 }
 
 #main p{
@@ -140,8 +139,4 @@ body {
 #main ul{
   list-style-type: none;
   padding-right: 30px;
-}
-
-#main-wrapper h3, #main-wrapper p {
-  display: inline;
 }

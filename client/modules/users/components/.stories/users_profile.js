@@ -3,39 +3,22 @@ import { storiesOf, action } from '@kadira/storybook';
 import UsersProfile from '../users_profile';
 
 storiesOf('Users Profile', module)
-  .add('Current user (Shows edit button)', () => {
+  .add('User Profile', () => {
     const userObject = {
-      _id: "kjhEDFGKJouhjgGfM",
+      _id: "1",
       profile: {
         username: "johnyCash",
         firstname: "John",
         lastname: "Doe",
         gender: "male",
-        age: "25"
+        age: "25",
+        avatar: "/avatar.png"
       }
     };
 
-    const routeParamsUserId = "kjhEDFGKJouhjgGfM";
+    const routeParamsUserId = "1";
 
     return (
-      <UsersProfile user={userObject} profileId={routeParamsUserId} />
-    );
-  })
-  .add('Not current user (Shows block button)', () => {
-    const userObject = {
-      _id: "kjhEDFGKJouhjgGfM",
-      profile: {
-        username: "johnyCash",
-        firstname: "John",
-        lastname: "Doe",
-        gender: "male",
-        age: "25"
-      }
-    };
-
-    const routeParamsUserId = "kjhEDFGKJosduhjgGfM";
-
-    return (
-      <UsersProfile user={userObject} profileId={routeParamsUserId} />
+      <UsersProfile user={userObject} profile={userObject} profileId={routeParamsUserId} />
     );
   });
