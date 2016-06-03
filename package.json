@@ -44,6 +44,7 @@
     "node-simple-schema": "0.0.4",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
-    "react-mounter": "^1.2.0"
+    "react-mounter": "^1.2.0",
+    "underscore": "^1.8.3"
   }
 }

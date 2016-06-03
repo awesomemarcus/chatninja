@@ -7,10 +7,10 @@ class UsersOnlineRow extends React.Component{
  }
  render(){
 
-  const {user} = this.props;
+  const {user, notifCount} = this.props;
   return(
    <li>
-       <a className="list-group-item" href="#" onClick={this.handleUserClick.bind(this)}>{user.profile.username}</a>
+       <a className="list-group-item" href="#" onClick={this.handleUserClick.bind(this)}>{user.profile.username} <b>{(notifCount > 0) ? notifCount : ''}</b></a>
    </li>
   );
  }

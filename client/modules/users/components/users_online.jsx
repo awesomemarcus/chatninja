@@ -9,14 +9,30 @@ class UsersOnline extends React.Component{
 
  }
 
+ getNotifications(messages, userId){
+  var count = 0;
+
+  messages.map(message => {
+   if(message.fromUser == userId && message.read == false){
+    count += 1;
+   }
+  })
+  return count;
+ }
+
  render(){
 
-  const {onlineUsers} = this.props;
+  const {onlineUsers, userMessages} = this.props;
 
   return(
    <ul className="nav list-group">
     {onlineUsers.map( user => (
-     <UsersOnlineRow onUserClick={this.handleUserClick.bind(this)} key={user._id} user={user} />
+     <div>
+
+      <UsersOnlineRow
+       notifCount={this.getNotifications(userMessages, user._id)}
+       onUserClick={this.handleUserClick.bind(this)} key={user._id} user={user} />
+     </div>
     ))}
 
    </ul>

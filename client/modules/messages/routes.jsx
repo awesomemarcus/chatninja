@@ -2,7 +2,7 @@ import React from 'react';
 import {mount} from 'react-mounter';
 
 import MainLayout from '../core/containers/main_layout';
-import MessagesLayout from './components/messages_layout';
+import MessagesLayout from './containers/messages_layout';
 import AuthChecker from '../users/containers/auth_checker';
 
 
