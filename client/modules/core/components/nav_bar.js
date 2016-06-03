@@ -24,7 +24,8 @@ class NavBar extends React.Component {
                 </ul>
 
                 <ul className="nav navbar-nav navbar-right">
-                      <li><a href="/" onClick={this.logout.bind(this)}>Logout</a></li>
+                      <li><a><span className="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>{Meteor.user().profile.username}</a></li>
+                      <li><a href="" onClick={this.logout.bind(this)}>Logout</a></li>
                 </ul>
 
 

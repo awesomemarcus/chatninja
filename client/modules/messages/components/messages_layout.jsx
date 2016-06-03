@@ -55,6 +55,8 @@ class MessagesLayout extends React.Component {
             ""
           }
 
+          <p className="pull-right" style={{paddingRight: '150px', paddingTop: '20px'}}><a href="#">View Profile</a></p>
+
           <MessagesBox recipientId={this.state.recipientId}/>
 
           <div className="col-md-12 footer">

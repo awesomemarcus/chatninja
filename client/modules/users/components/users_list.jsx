@@ -12,7 +12,7 @@ class UsersList extends React.Component{
        <div className="row">
         <div className="col-md-12 ninja">
           <h2>All Ninjas</h2>
-          <input type="text" className="form-control" placeholder="Search..."/>
+          <input type="text" className="form-control" placeholder="Search ninja..."/>
         </div>
        </div>
       <div className="row">
