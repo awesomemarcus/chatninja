@@ -27,12 +27,9 @@ class UsersOnline extends React.Component{
   return(
    <ul className="nav list-group">
     {onlineUsers.map( user => (
-     <div>
-
       <UsersOnlineRow
        notifCount={this.getNotifications(userMessages, user._id)}
        onUserClick={this.handleUserClick.bind(this)} key={user._id} user={user} />
-     </div>
     ))}
 
    </ul>

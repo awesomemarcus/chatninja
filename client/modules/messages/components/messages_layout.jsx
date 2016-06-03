@@ -9,7 +9,7 @@ class MessagesLayout extends React.Component {
   componentWillMount(){
    this.setState({
     recipientId: this.props.recipientId,
-    recipient: null,
+    recipient: this.props.recipient,
    });
   }
 
@@ -23,7 +23,7 @@ class MessagesLayout extends React.Component {
   render() {
 
    const {userMessages} = this.props;
-   
+
   return (
     <div>
       <div id="wrapper">
