@@ -11,13 +11,13 @@ storiesOf('Users Item', module)
         firstname: "John",
         lastname: "Doe",
         gender: "male",
-        age: "25"
+        age: "25",
+        avatar: "/avatar.png"
       },
       status: {
         online: true,
         idle: false,
         offline: false,
-        lastActivity: '2 mins ago',
       }
     };
 
@@ -33,13 +33,14 @@ storiesOf('Users Item', module)
         firstname: "John",
         lastname: "Doe",
         gender: "male",
-        age: "25"
+        age: "25",
+        avatar: "/avatar.png"
       },
       status: {
         online: true,
         idle: true,
         offline: false,
-        lastActivity: '2 mins ago',
+        lastActivity: "2016-06-02T07:08:46.737Z",
       }
     };
 
@@ -55,13 +56,13 @@ storiesOf('Users Item', module)
         firstname: "John",
         lastname: "Doe",
         gender: "male",
-        age: "25"
+        age: "25",
+        avatar: "/avatar.png"
       },
       status: {
         online: false,
         idle: false,
         offline: true,
-        lastActivity: '2 mins ago',
       }
     };
 

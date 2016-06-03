@@ -1,6 +1,6 @@
 import {useDeps, composeAll, composeWithTracker} from 'mantra-core';
 
-import MessagesBox from '../components/messages_box.jsx';
+import MessagesBox from '../components/messages_box';
 
 export const composer = ({context, recipientId}, onData) => {
   const {Collections} = context();
@@ -8,8 +8,9 @@ export const composer = ({context, recipientId}, onData) => {
    const messages = Collections.Messages.find({$or:[{fromUser: recipientId}, {toUser: recipientId}]}, {sort: {createdAt: 1}}).fetch();
 
 
-   onData(null, {messages, recipientId});
+   const myId = Meteor.userId();
 
+   onData(null, {messages, recipientId, myId});
 
 };
 

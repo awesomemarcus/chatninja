@@ -24,8 +24,8 @@
 }
 .bubble.you {
   float: left;
-  color: #fff;
-  background-color: pink;
+  color: #000;
+  background-color: #f1f0f0;
   -webkit-align-self: flex-start;
   align-self: flex-start;
   -moz-animation-name: slideFromLeft;
@@ -34,12 +34,12 @@
 }
 .bubble.you:before {
   left: -3px;
-  background-color: pink;
+  background-color: #f1f0f0;
 }
 .bubble.me {
   float: right;
-  color: #1a1a1a;
-  background-color: #eceff1;
+  color: #fff;
+  background-color: #0077e5;
   -webkit-align-self: flex-end;
   align-self: flex-end;
   -moz-animation-name: slideFromRight;
@@ -48,7 +48,7 @@
 }
 .bubble.me:before {
   right: -3px;
-  background-color: #eceff1;
+  background-color: #0077e5;
 }
 
 .bubble {

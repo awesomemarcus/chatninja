@@ -1,11 +1,12 @@
 import React from 'react';
-import {$} from 'meteor/jquery';
+import $ from 'jquery';
 
 
 class MessagesSend extends React.Component{
 
  handleMessageSend(e){
   e.preventDefault();
+  if(this.refs.message.value.replace(/^\s+|\s+$/g, '').length != 0){
   const {recipientId, messageSend, validateMessage, errorFields} = this.props;
 
   const toId = recipientId;
@@ -21,8 +22,10 @@ class MessagesSend extends React.Component{
   }
 
   $('#main').animate({scrollTop: 1000000});
+  const beep = new Audio('/slash.mp3');
+  beep.play();
   this.refs.message.value = "";
-
+  }
  }
 
  testSend(e){

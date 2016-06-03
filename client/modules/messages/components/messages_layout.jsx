@@ -1,24 +1,22 @@
 import React from 'react';
-import {$} from 'meteor/jquery';
 import MessagesBox from '../containers/messages_box.js';
 import MessagesSend from '../containers/messages_send.js';
 import UsersOnline from '../../users/containers/users_online.js';
+import moment from 'moment';
 
 class MessagesLayout extends React.Component {
 
   componentWillMount(){
    this.setState({
     recipientId: this.props.recipientId,
+    recipient: null,
    });
   }
 
-  componentDidMount() {
-    $('#main').animate({scrollTop: 1000000});
-  }
-
-  handleRecipientId(recipientId){
+  handleRecipientId(recipient){
    this.setState({
-    recipientId: recipientId,
+    recipientId: recipient._id,
+    recipient: recipient,
    })
   }
 
@@ -38,11 +36,26 @@ class MessagesLayout extends React.Component {
           </div>
         </div>
 
-        {(this.state.recipientId && this.state.recipientId != Meteor.userId()) ?
+        {(this.state.recipient && this.state.recipientId && this.state.recipientId != Meteor.userId()) ?
         <div id="main-wrapper" className="col-xs-12 col-sm-12 col-md-10 pull-right">
 
-          <MessagesBox recipientId={this.state.recipientId}/>
+          <h3>
+            <img src={this.state.recipient.profile.avatar} alt="" className="img-responsive pull-left" style={{height: '53px', padding: '4px 10px 4px 20px'}}/>
+            {this.state.recipient.profile.username}
+            {(this.state.recipient.status.online && !this.state.recipient.status.idle) ? <span style={{color: 'green'}} className="glyphicon glyphicon-one-fine-dot"></span> :
+            (this.state.recipient.status.online && this.state.recipient.status.idle) ? <span style={{color: 'orange'}} className="glyphicon glyphicon-one-fine-dot"></span> :
+            <span style={{color: 'gray'}} className="glyphicon glyphicon-one-fine-dot"></span>
+            }
+          </h3>
 
+          {(this.state.recipient.status.idle) ?
+            <p style={{paddingLeft: '5px', verticalAlign: 'text-botttom'}}>
+            active {moment(this.state.recipient.status.lastActivity).startOf().fromNow()}
+            </p> :
+            ""
+          }
+
+          <MessagesBox recipientId={this.state.recipientId}/>
 
           <div className="col-md-12 footer">
             <MessagesSend recipientId={this.state.recipientId}/>
