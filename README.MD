@@ -2,7 +2,7 @@
 ##### Email: user1@email.com to user20@email.com 
 ##### Password: user12345
 
-To run locally:
+###### To run locally:
 
 ```sh
 $ meteor run
