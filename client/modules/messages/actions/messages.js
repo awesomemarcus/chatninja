@@ -3,7 +3,7 @@ import {MessageSchem} from '/lib/collections/messages';
 export default {
   messageSend({Meteor}, fromId, toId, message){
 
-   const messageDataArray =
+   const messageData =
     {
      message: message,
      fromUser: fromId,
@@ -13,7 +13,7 @@ export default {
      createdAt: new Date(),
     }
 
-   Meteor.call('messagesSend', messageDataArray);
+   Meteor.call('messagesSend', messageData);
   },
   validateMessage({LocalState}, message){
    let messageData = {

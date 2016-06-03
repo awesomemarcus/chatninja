@@ -2,7 +2,7 @@ const {describe, it} = global;
 import {expect} from 'chai';
 import {stub, spy} from 'sinon';
 
-describe('messages.containers.messaged_users', () => {
+describe('core.containers.nav_bar', () => {
   describe('composer', () => {
 
 //    const Tracker = {nonreactive: cb => cb()};

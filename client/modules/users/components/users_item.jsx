@@ -6,6 +6,7 @@ class UsersList extends React.Component{
  render(){
 
   const {user} = this.props;
+  const lastLogin = new Date();
 
   return(
    <div>
@@ -23,9 +24,9 @@ class UsersList extends React.Component{
           }
           </h4>
 
-          {(user.status.idle) ?
+          {(user.status.idle && user.status.online) ?
             <p style={{fontSize: '12px'}}>active {moment(user.status.lastActivity).startOf().fromNow()}</p> :
-            ""
+            ''
           }
 
         </div>

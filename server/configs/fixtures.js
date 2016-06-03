@@ -14,6 +14,7 @@ Meteor.startup(function(){
   Accounts.users.update({}, {$set: {
    "status.online": false,
    "status.idle": false,
+   "status.lastLogin.date:": new Date(),
   }}, {multi: true});
 
  }

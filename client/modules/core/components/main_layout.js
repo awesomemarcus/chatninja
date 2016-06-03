@@ -1,7 +1,7 @@
 import React from 'react';
 
-import NavBar , {NavBarLogOut} from './nav_bar';
-
+import {NavBarLogOut} from './nav_bar';
+import NavBar from '../containers/nav_bar';
 
 
 class Layout extends React.Component {

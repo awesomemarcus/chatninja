@@ -9,18 +9,6 @@ export default function () {
 
      Messages.insert(messageData);
 
-     // const bulkOp = Messages.rawCollection().initializeUnorderedBulkOp();
-     //
-     // messageData.forEach(function(data){
-     //  bulkOp.insert(data);
-     // });
-     //
-     // bulkOp.execute()
-    },
-    'getMessagedUsers'(userId){
-     check(userId, String);
-
-     return Messages.aggregate([{$sort:{createdAt: -1}}, {$match: {$or: [{fromUser: userId},{toUser:userId}]}}, {$group: {_id:"$toUser", fromUser:{$first:"$fromUser"},toUser:{$first:"$toUser"}, message:{$first:"$message"}}}]);
     },
 
     'deleteMessage'(messageId, userId){
@@ -29,13 +17,6 @@ export default function () {
 
 
      Messages.update({_id:messageId}, {$addToSet: {deleted: userId}});
-
-    },
-
-    'userUnreadMessages'(userId){
-     check(userId, String);
-
-     return Messages.aggregate([{$match: {$and:[{toUser: userId}, {read: false}]}},{$group: {_id:"$fromUser", total: {$sum: 1}}}]);
 
     },
 

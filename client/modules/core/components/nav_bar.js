@@ -2,6 +2,7 @@ import React from 'react';
 import {Meteor} from 'meteor/meteor';
 class NavBar extends React.Component {
   render() {
+   const {getNotifCount} = this.props;
     return (
       <nav className="navbar navbar-inverse navbar-fixed-top">
             <div className="container-fluid">
@@ -19,7 +20,7 @@ class NavBar extends React.Component {
 
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav">
-                  <li><a href={"/inbox/" + Meteor.userId()}>Inbox</a></li>
+                  <li><a href={"/inbox/" + Meteor.userId()}>Inbox {(getNotifCount > 0) ? <span className="glyphicon glyphicon-comment"></span> : ''}</a></li>
                   <li><a href={'/users/profile/' + Meteor.userId()}>My Profile</a></li>
                 </ul>
 
