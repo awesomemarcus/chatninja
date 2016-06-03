@@ -140,7 +140,3 @@ body {
   list-style-type: none;
   padding-right: 30px;
 }
-
-#main-wrapper h3, #main-wrapper p {
-  display: inline;
-}

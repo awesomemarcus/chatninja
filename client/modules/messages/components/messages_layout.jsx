@@ -40,22 +40,20 @@ class MessagesLayout extends React.Component {
         <div id="main-wrapper" className="col-xs-12 col-sm-12 col-md-10 pull-right">
 
           <h3>
-            <img src={this.state.recipient.profile.avatar} alt="" className="img-responsive pull-left" style={{height: '53px', padding: '4px 10px 4px 20px'}}/>
+            <img src={this.state.recipient.profile.avatar} alt="" className="img-responsive pull-left" style={{height: '26px', padding: '0 10px 0 20px'}}/>
             {this.state.recipient.profile.username}
-            {(this.state.recipient.status.online && !this.state.recipient.status.idle) ? <span style={{color: 'green'}} className="glyphicon glyphicon-one-fine-dot"></span> :
+            {/*{(this.state.recipient.status.online && !this.state.recipient.status.idle) ? <span style={{color: 'green'}} className="glyphicon glyphicon-one-fine-dot"></span> :
             (this.state.recipient.status.online && this.state.recipient.status.idle) ? <span style={{color: 'orange'}} className="glyphicon glyphicon-one-fine-dot"></span> :
             <span style={{color: 'gray'}} className="glyphicon glyphicon-one-fine-dot"></span>
-            }
+            }*/}
           </h3>
 
-          {(this.state.recipient.status.idle) ?
+          {/*{(this.state.recipient.status.idle) ?
             <p style={{paddingLeft: '5px', verticalAlign: 'text-botttom'}}>
             active {moment(this.state.recipient.status.lastActivity).startOf().fromNow()}
             </p> :
             ""
-          }
-
-          <p className="pull-right" style={{paddingRight: '60px', paddingTop: '24px'}}><a href="#">View Profile</a></p>
+          }*/}
 
           <MessagesBox recipientId={this.state.recipientId}/>
 
