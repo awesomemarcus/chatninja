@@ -17,5 +17,18 @@ export default function () {
      //
      // bulkOp.execute()
     },
+    'getMessagedUsers'(userId){
+     check(userId, String);
+
+     return Messages.aggregate([{$sort:{createdAt: -1}}, {$match: {$or: [{fromUser: userId},{toUser:userId}]}}, {$group: {_id:"$toUser", fromUser:{$first:"$fromUser"},toUser:{$first:"$toUser"}, message:{$first:"$message"}}}]);
+    },
+    'deleteMessage'(messageId, userId){
+     check(messageId, String);
+     check(userId, String);
+
+
+     Messages.update({_id:messageId}, {$addToSet: {deleted: userId}});
+
+    },
   });
 }

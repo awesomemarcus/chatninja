@@ -19,7 +19,7 @@ class NavBar extends React.Component {
 
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul className="nav navbar-nav">
-                  <li><a href="/inbox">Inbox</a></li>
+                  <li><a href={"/inbox/" + Meteor.userId()}>Inbox</a></li>
                   <li><a href={'/users/profile/' + Meteor.userId()}>My Profile</a></li>
                 </ul>
 

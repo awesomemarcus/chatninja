@@ -8,7 +8,8 @@ class MessagesLayout extends React.Component {
 
   componentWillMount(){
    this.setState({
-    recipientId: null,
+    recipientId: this.props.recipientId,
+    recipient: null,
    });
   }
 
@@ -27,11 +28,10 @@ class MessagesLayout extends React.Component {
           <div id="sidebar">
 
               <UsersOnline onhandleRecipientId={this.handleRecipientId.bind(this)}/>
-
           </div>
         </div>
 
-        {this.state.recipientId ?
+        {(this.state.recipient && this.state.recipientId && this.state.recipientId != Meteor.userId()) ?
         <div id="main-wrapper" className="col-xs-12 col-sm-12 col-md-10 pull-right">
 
           <h3>

@@ -4,8 +4,6 @@ import {DocHead} from 'meteor/kadira:dochead';
 
 // modules
 import coreModule from './modules/core';
-import productsModule from './modules/products';
-import categoriesModule from './modules/categories';
 import usersModule from './modules/users';
 import uploadsModule from './modules/uploads';
 import messagesModule from './modules/messages';
@@ -16,8 +14,6 @@ const context = initContext();
 // create app
 const app = createApp(context);
 app.loadModule(coreModule);
-app.loadModule(productsModule);
-app.loadModule(categoriesModule);
 app.loadModule(usersModule);
 app.loadModule(uploadsModule);
 app.loadModule(messagesModule);

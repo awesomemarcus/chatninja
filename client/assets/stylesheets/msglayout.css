@@ -72,12 +72,14 @@ body {
 	}
 }
 .footer {
-    background-color: #9d9d9d;
 	  bottom:0;
   	position:fixed;
     padding:10px;
     width: 100%;
     height: 86px;
+    -webkit-box-shadow: 0px -4px 9px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 0px -4px 9px rgba(50, 50, 50, 0.2);
+    box-shadow: 0px -4px 9px rgba(50, 50, 50, 0.2);
 }
 
 .sending-message {

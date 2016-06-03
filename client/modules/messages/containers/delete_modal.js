@@ -1,16 +1,18 @@
 import {useDeps, composeAll, composeWithTracker} from 'mantra-core';
 
-import CategoriesDelete from '../components/categories_delete';
+import DeleteModal from '../components/delete_modal.jsx';
 
 export const composer = ({context}, onData) => {
+
   onData(null, {});
 };
 
-export const depsMapper = (context) => ({
+export const depsMapper = (context, actions) => ({
+  deleteMessage: actions.messages.messagesDelete,
   context: () => context,
 });
 
 export default composeAll(
   composeWithTracker(composer),
   useDeps(depsMapper)
-)(CategoriesDelete);
+)(DeleteModal);

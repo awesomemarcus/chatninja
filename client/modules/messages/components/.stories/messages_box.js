@@ -9,6 +9,10 @@ storiesOf('Messages Box', module)
         fromUser: "default",
         message: 'I typed this message. :) :skull:'
       },
+      {
+        fromUser: "default",
+        message: 'I typed this message. :) :skull:'
+      },
     ];
 
     return (
@@ -20,6 +24,10 @@ storiesOf('Messages Box', module)
       {
         fromUser: "notuser",
         message: 'This message is from the other user. :headphones:'
+      },
+      {
+        fromUser: "default",
+        message: 'I typed this message. :) :skull:'
       },
     ];
 
