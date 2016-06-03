@@ -1,6 +1,12 @@
-# Fixed User Accounts:
+# Fixtures:
 ##### Email: user1@email.com to user20@email.com 
 ##### Password: user12345
+
+To run locally:
+
+```sh
+$ meteor run
+```
 
 
 # Mantra BoilerPlate 2
