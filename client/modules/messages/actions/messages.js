@@ -28,6 +28,12 @@ export default {
    }
   },
 
+  markRead({Meteor}, senderId){
+
+   Meteor.call('messagesMarkRead', Meteor.userId(), senderId);
+
+  },
+
   clearErrors({LocalState}){
    LocalState.set('MESSAGE_ERROR', null);
   },

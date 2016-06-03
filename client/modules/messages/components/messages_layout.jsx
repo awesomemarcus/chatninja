@@ -9,7 +9,7 @@ class MessagesLayout extends React.Component {
   componentWillMount(){
    this.setState({
     recipientId: this.props.recipientId,
-    recipient: null,
+    recipient: this.props.recipient,
    });
   }
 
@@ -21,13 +21,18 @@ class MessagesLayout extends React.Component {
   }
 
   render() {
+
+   const {userMessages} = this.props;
+
   return (
     <div>
       <div id="wrapper">
         <div id="sidebar-wrapper" className="col-md-2">
           <div id="sidebar">
 
-              <UsersOnline onhandleRecipientId={this.handleRecipientId.bind(this)}/>
+              <UsersOnline
+               onhandleRecipientId={this.handleRecipientId.bind(this)}
+               userMessages={userMessages}/>
           </div>
         </div>
 

@@ -7,12 +7,12 @@ class UsersOnlineRow extends React.Component{
  }
  render(){
 
-  const {user} = this.props;
+  const {user, notifCount} = this.props;
   return(
    <li>
     <a className="list-group-item" href="#" onClick={this.handleUserClick.bind(this)}>
     <img src={user.profile.avatar} alt="" className="img-responsive pull-left" />
-    <h4>{user.profile.username}</h4>
+    <h4>{user.profile.username} <b>{(notifCount > 0) ? notifCount : ''}</b></h4>
     </a>
    </li>
   );
